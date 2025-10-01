@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site Padrão — Imagem</title>
+  <meta name="description" content="Página com uma única imagem." />
+  <style>
+:root {
+  --bg: #0b1220;
+  --card: #111a2b;
+  --text: #e6eaf2;
+  --muted: #9aa3b2;
+  --accent: #6ea8fe;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--text);
+  background: linear-gradient(180deg, #0b1220 0%, #0f1a33 100%);
+  display: grid;
+  place-items: center;
+}
+.container {
+  width: 100%;
+  max-width: 720px;
+  padding: 32px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+h1, h2, p { margin: 0 0 14px 0; }
+p.muted { color: var(--muted); }
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #06122b;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+  box-shadow: 0 8px 16px rgba(110,168,254,.25);
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+.header {
+  display:flex; align-items:center; gap:12px; margin-bottom:8px;
+}
+.badge {
+  padding: 4px 10px; border-radius: 999px; background: rgba(110,168,254,.15);
+  color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .3px;
+}
+footer { margin-top: 14px; font-size: 12px; color: var(--muted); text-align:center;}
+img.responsive { width:100%; height:auto; border-radius: 12px; border:1px solid rgba(255,255,255,.08); }
+</style>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="header">
+        <span class="badge">Imagem</span>
+        <h2>Página da Imagem</h2>
+      </div>
+      <img class="responsive" src="./images/imagem.jpg" alt="Renanx" />
+      <p class="muted">Para trocar, substitua o arquivo em <code>/images/imagem.jpg</code>.</p>
+      <a class="btn" href="./index.html">Voltar</a>
+    </section>
+    <footer>
+      © 2025 — Modelo estático simples.
+    </footer>
+  </main>
+</body>
+</html>
